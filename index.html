@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Data Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Home made PokeDex</h1>
+      <form id="searchForm">
+        <input
+          type="text"
+          id="pokemonInput"
+          placeholder="Enter Pokémon name or ID"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div id="loading" class="hidden">Loading...</div>
+      <div id="error" class="hidden">Pokémon not found. Please try again!</div>
+
+      <!-- Pokémon Data Display -->
+      <div id="pokemonData" class="hidden">
+        <h2 id="pokemonName"></h2>
+        <img id="pokemonImage" src="" alt="Pokemon image" />
+        <p><strong>Types:</strong> <span id="pokemonTypes"></span></p>
+        <p><strong>Abilities:</strong> <span id="pokemonAbilities"></span></p>
+        <p><strong>Stats:</strong></p>
+        <ul id="pokemonStats"></ul>
+      </div>
+      
+<div id="searchHistory"></div>
+        <h3>Search History</h3>
+        <button id="clearHistoryButton">Clear History</button>
+        <ul id="historyList"></ul>
+      </div>
+      <!-- Search History -->
+      <div id="searchHistory">
+
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
